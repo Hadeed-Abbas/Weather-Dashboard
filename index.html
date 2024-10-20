@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="logo"><img src="images/logo.png" alt="logo"></div>
+        <ul class="menu">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="tables.html">Tables</a></li>
+        </ul>
+      </div>
+
+      <div class="mainContent">
+        <div class="header">
+          <div class="searchContainer">
+            <input
+              type="text"
+              id="city"
+              class="searchBar"
+              placeholder="Enter city name"
+            />
+            <button id="searchBtn" class="searchBtn">
+              <img src="images/search-icon.png" alt="Search" width="20px" />
+            </button>
+          </div>
+          <h2 class="displayUser">User Profile</h2>
+          <div class="userProfile">
+            <img src="images/user-profile.png" alt="user-profile" width="50px" height="50px" />
+          </div>
+        </div>
+
+        <div class="weatherWidget">
+          <h2>Weather Data for <span id="cityName"></span></h2>
+          <div id="weatherInfo">
+            <div class="weatherContent">
+              <p>Temperature: <span id="temperature">--</span></p>
+              <p>Humidity: <span id="humidity">--</span></p>
+              <p>Wind Speed: <span id="windSpeed">--</span></p>
+              <p>Description: <span id="weatherDescription">--</span></p>
+            </div>
+            <div>
+              <img
+                id="weatherIcon"
+                src=""
+                alt="Weather Icon"
+                style="display: none"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="forecastWidget">
+          <h3 style="margin-bottom: 40px;">5-Day Forecast</h3>
+          <div id="forecastContent"></div>
+        </div>
+
+        <div class="charts">
+          <div class="chart">
+            <h3>Line Chart</h3>
+            <canvas id="lineChart"></canvas>
+          </div>
+          <div class="chart">
+            <h3>Vertical Bar Chart</h3>
+            <canvas id="barChart"></canvas>
+          </div>
+          <div class="chart">
+            <h3>Doughnut Chart</h3>
+            <canvas id="doughnutChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

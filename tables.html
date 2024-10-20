@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table and Chatbot</title>
+    <link rel="stylesheet" href="css/tables.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sideBar">
+        <div class="logo"><img src="images/logo.png" alt="logo"></div>
+        <ul class="menu">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="tables.html">Table</a></li>
+        </ul>
+      </div>
+
+      <div class="mainContent">
+        <div class="header">
+          <div class="searchContainer">
+            <input
+              type="text"
+              id="city"
+              class="searchBar"
+              placeholder="Enter city name"
+            />
+            <button id="searchBtn" class="searchBtn">
+              <img src="images/search-icon.png" alt="Search" width="20px" />
+            </button>
+          </div>
+          <h2 class="displayUser">User Profile</h2>
+          <div class="userProfile">
+            <img src="images/user-profile.png" alt="user-profile" width="50px" height="50px" />
+          </div>
+        </div>
+
+        <div class="contentSection">
+          <div class="tableSection">
+            <h2>Weather Table</h2>
+            <table id="weatherForecastTable">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>
+                    Temperature (°C)
+                    <select id="tempFilter">
+                      <option value="none">No Filter</option>
+                      <option value="asc">Ascending</option>
+                      <option value="desc">Descending</option>
+                      <option value="highest">Highest Temperature</option>
+                    </select>
+                  </th>
+                  <th>
+                    Weather
+                    <select id="weatherFilter">
+                      <option value="all">All Weather</option>
+                      <option value="rain">Rainy Days</option>
+                    </select>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+            <div class="pagination">
+              <button id="prevBtn" disabled>Previous</button>
+              <span id="pageInfo">Page 1</span>
+              <button id="nextBtn">Next</button>
+            </div>
+          </div>
+
+          <div class="chatSection">
+            <h3 style="margin-bottom: 5px;">Chatbot</h3>
+            <div class="chatAnswer">Answer area for chatbot</div>
+            <div class="chatBar">
+              <input
+                type="text"
+                placeholder="Enter prompt"
+                class="chatInput"
+              />
+              <button class="chatBtn">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/tables.js"></script>
+  </body>
+</html>
