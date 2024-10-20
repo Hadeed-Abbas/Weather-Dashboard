@@ -22,4 +22,4 @@ This project is a responsive weather dashboard that allows users to search for r
 - **Gemini API**: Provides weather information using chatting.
 
 ## Demo
-You can try a live demo of the project [here](https://hadeed-abbas.github.io/Weather-Dashboard.git)
+You can try a live demo of the project [here](https://hadeed-abbas.github.io/Weather-Dashboard)
