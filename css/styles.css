@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; 
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -12,6 +18,7 @@ body {
 
 .container {
     display: flex;
+    flex-direction: row;
     height: 100vh;
     width: 100vw;
 }
@@ -28,17 +35,27 @@ body {
     transition: width 0.3s ease;
 }
 
+.mainContent {
+    width: 80%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    transition: width 0.3s ease;
+}
+
 
 .logo {
     text-align: center;
     margin: 20px 0;
-  }
-  
-  .logo img {
-    max-width: 100px; 
-    height: auto; 
-    border-radius: 10px; 
-  }
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 10px;
+}
 
 .menu {
     list-style: none;
@@ -65,28 +82,20 @@ body {
     background-color: #2d2e38;
 }
 
-.mainContent {
-    width: 80%;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    background-color: #f9f9f9;
-    overflow-y: auto;
-    transition: width 0.3s ease;
-}
+
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
-    padding: 0 20px; 
+    padding: 0 20px;
 }
 
 .searchContainer {
     display: flex;
     align-items: center;
-    width: 50%; 
+    width: 50%;
 }
 
 .searchBar {
@@ -123,7 +132,7 @@ body {
 }
 
 .displayUser {
-    display: none; 
+    display: none;
 }
 
 .userProfile {
@@ -151,12 +160,12 @@ body {
     background-color: #00aaff;
 }
 
-#weatherInfo{
+#weatherInfo {
     display: flex;
     justify-content: space-evenly;
 }
 
-.weatherContent{
+.weatherContent {
     margin-top: 10px;
 }
 
@@ -225,7 +234,32 @@ body {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .mainContent {
+        width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .mainContent {
+        width: 100%;
+    }
+
     .header {
         flex-direction: column;
         align-items: flex-start;
@@ -248,12 +282,12 @@ body {
         border-radius: 8px;
     }
 
-    .displayUser{
+    .displayUser {
         display: block;
     }
 
     .userProfile {
-        align-self: flex-end; 
+        align-self: flex-end;
     }
 
     .chart {

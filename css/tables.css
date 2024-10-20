@@ -30,6 +30,7 @@ body {
 
 .container {
   display: flex;
+  flex-direction: row;
   height: 100vh;
   width: 100vw;
 }
@@ -97,13 +98,13 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
-  padding: 0 20px; 
+  padding: 0 20px;
 }
 
 .searchContainer {
   display: flex;
   align-items: center;
-  width: 50%; 
+  width: 50%;
 }
 
 .searchBar {
@@ -140,7 +141,7 @@ body {
 }
 
 .displayUser {
-  display: none; 
+  display: none;
 }
 
 .userProfile {
@@ -175,41 +176,40 @@ table {
   border-collapse: collapse;
   font-size: 16px;
   margin-top: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
-  border-radius: 10px; 
-  overflow: hidden; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 th,
 td {
   padding: 15px;
   text-align: left;
-  background-color: #f9f9f9; 
-  transition: background-color 0.3s ease; 
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
 }
 
 th {
-  background-color: #4b4c57; 
-  color: white; 
+  background-color: #4b4c57;
+  color: white;
   font-weight: bold;
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2; 
+  background-color: #f2f2f2;
 }
 
 tr:hover {
-  background-color: #e6e6e6; 
+  background-color: #e6e6e6;
 }
-
 
 th,
 td {
-  border: 1px solid white; 
+  border: 1px solid white;
 }
 
 td {
-  font-size: 18px; 
+  font-size: 18px;
 }
 
 select {
@@ -217,13 +217,12 @@ select {
   border-radius: 5px;
   border: 1px solid #ddd;
   background-color: #ffffff;
-  margin-left: 5px; 
+  margin-left: 5px;
 }
 
 select option {
   padding: 10px;
 }
-
 
 .chatSection {
   width: 30%;
@@ -232,9 +231,9 @@ select option {
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
-  display: flex; /* Make chatSection a flex container */
-  flex-direction: column; /* Arrange items in a column */
-  justify-content: space-between; /* Space out children */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .chatSection:hover {
@@ -254,7 +253,7 @@ select option {
 .chatBar {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px; 
+  margin-top: 10px;
 }
 
 .chatInput {
@@ -280,11 +279,117 @@ select option {
   background-color: rgb(0, 0, 255);
 }
 
-.chatAnswer {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  min-height: 150px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sideBar {
+    width: 100%;
+    height: auto;
+  }
+
+  .mainContent {
+    width: 100%;
+  }
+
+  .contentSection {
+    flex-direction: column;
+  }
+
+  .tableSection{
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .chatSection {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .searchContainer {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .searchBar {
+    width: 90%;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .searchBtn {
+    width: 50px;
+    border-radius: 8px;
+  }
+
+  .displayUser {
+    display: block;
+  }
+
+  .userProfile {
+    align-self: flex-end;
+  }
+
+  .chatInput {
+    width: 65%;
+  }
+
+  .chatBtn {
+    width: 30%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .searchContainer {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .searchBar {
+    width: 90%;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .searchBtn {
+    width: 50px;
+    border-radius: 8px;
+  }
+
+  .displayUser {
+    display: block;
+  }
+
+  .userProfile {
+    align-self: flex-end;
+  }
+
+  .chatInput {
+    width: 100%;
+  }
+
+  .chatBtn {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .chatBar {
+    flex-direction: column;
+  }
 }
